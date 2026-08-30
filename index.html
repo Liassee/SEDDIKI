@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ilias — Field Service Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hazard-strip"></div>
+
+<nav class="nav">
+  <div class="nav__id">DOSSIER N°<b>IL-2026</b> / TERRAIN</div>
+  <div class="nav__links">
+    <button data-tab-btn="interventions" class="active">INTERVENTIONS</button>
+    <button data-tab-btn="cv">CV</button>
+  </div>
+</nav>
+
+<!-- ================= PANEL 1 — INTERVENTIONS ================= -->
+<div class="panel active" data-tab-panel="interventions">
+
+  <header class="hero">
+    <div class="hero__eyebrow reveal">À l'écoute</div>
+    <h1 class="reveal">Ilias</h1>
+    <div class="hero__role reveal">Field Service Engineer — Systèmes Critiques</div>
+    <div class="hero__meta reveal">
+      <div>ZONE D'INTERVENTION<span>Domicile · France entière · International</span></div>
+      <div>SPÉCIALITÉ<span>Interventions MST/SSM sur cuves de réacteurs</span></div>
+      <div>LANGUES<span>FR · EN · DE</span></div>
+    </div>
+  </header>
+
+  <section id="interventions">
+    <div class="section__head reveal">
+      <span class="section__num">01</span>
+      <h2 class="section__title">Journal d'intervention</h2>
+    </div>
+
+    <div class="log-entry reveal reveal-stagger">
+      <div class="log-entry__date"><b>UK</b>Sizewell B</div>
+      <div class="log-entry__body">
+        <h3>Intervention internationale — Framatome</h3>
+        <p>Mission de maintenance sur site nucléaire britannique, coordination avec équipes locales et interlocuteurs Framatome. Remplacer / préciser le contexte exact de l'intervention ici.</p>
+        <div class="log-entry__tags">
+          <span class="tag">MST/SSM</span>
+          <span class="tag">Coordination internationale</span>
+          <span class="tag">Anglais opérationnel</span>
+        </div>
+      </div>
+      <div class="photo-slot">
+        <img src="photos/sizewell.jpg" alt="Équipe d'intervention en combinaison sur site nucléaire, à proximité de la cuve du réacteur">
+        <span>PHOTO — INTERVENTION<br>SIZEWELL B<br>(1200×900 min.)</span>
+      </div>
+    </div>
+
+    <div class="log-entry reveal reveal-stagger">
+      <div class="log-entry__date"><b>DE</b>Krefeld</div>
+      <div class="log-entry__body">
+        <h3>Intervention internationale — Allemagne</h3>
+        <p>Mission technique en Allemagne, environnement germanophone. Remplacer / préciser le contexte exact de l'intervention ici.</p>
+        <div class="log-entry__tags">
+          <span class="tag">MST/SSM</span>
+          <span class="tag">Allemand professionnel</span>
+          <span class="tag">Conception/Assemblage</span>
+        </div>
+      </div>
+      <div class="photo-slot">
+        <img src="photos/krefeld.jpg" alt="Intervention sur équipement MST/SSM en atelier, site de Krefeld">
+        <span>PHOTO — INTERVENTION<br>KREFELD<br>(1200×900 min.)</span>
+      </div>
+    </div>
+
+    <div class="log-entry reveal reveal-stagger">
+      <div class="log-entry__date"><b>FR</b>Site nucléaire</div>
+      <div class="log-entry__body">
+        <h3>Intervention sur cuve de réacteur</h3>
+        <p>Exemple à personnaliser : décrire une intervention précise — diagnostic, méthode, contrainte de sûreté, résultat. Un cas concret vaut mieux qu'une généralité.</p>
+        <div class="log-entry__tags">
+          <span class="tag">Diagnostic terrain</span>
+          <span class="tag">Sûreté nucléaire</span>
+        </div>
+      </div>
+      <div class="photo-slot">
+        <img src="photos/site-francais.jpg" alt="MSDG — machine de serrage et desserrage des goujons du couvercle de cuve du réacteur">
+        <span>PHOTO — INTERVENTION<br>SITE FRANÇAIS<br>(1200×900 min.)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="carte" class="operations">
+    <div class="section__head reveal">
+      <span class="section__num">02</span>
+      <h2 class="section__title">Zone d'opération</h2>
+    </div>
+    <div class="operations__grid reveal">
+      <div class="globe-stage" data-globe-stage>
+        <canvas id="operations-globe" aria-label="Globe interactif des zones d'intervention"></canvas>
+        <div class="globe-stage__hud">
+          <span>Vue de déploiement</span>
+          <span data-globe-status>Rotation active</span>
+        </div>
+        <div class="globe-stage__controls" aria-label="Contrôles du globe">
+          <button type="button" data-globe-action="zoom-in" title="Zoomer">+</button>
+          <button type="button" data-globe-action="zoom-out" title="Dézoomer">−</button>
+          <button type="button" data-globe-action="toggle" title="Suspendre ou reprendre la rotation">⏸</button>
+          <button type="button" data-globe-action="focus-home" title="Recentrer sur le domicile">⌂</button>
+          <button type="button" data-globe-action="focus-world" title="Vue globale">◎</button>
+        </div>
+        <div class="globe-stage__tooltip" data-globe-tooltip hidden></div>
+      </div>
+
+      <aside class="operations__panel">
+        <div class="operations__summary">
+          <span>BASE DE DÉPART</span>
+          <strong>Domicile</strong>
+          <p>Point d'ancrage personnel pour présenter une mobilité France entière et internationale, sans faire de Forbach la base principale.</p>
+        </div>
+
+        <div class="operations__detail" data-location-detail>
+          <span class="operations__code">DOM</span>
+          <h3>Domicile</h3>
+          <p>Base personnelle à proximité de Gien. Positionnement utile pour montrer la disponibilité terrain, notamment vers les sites du centre de la France.</p>
+          <small>FR · Base personnelle</small>
+        </div>
+
+        <div class="operations__list" data-location-list aria-label="Sites d'intervention"></div>
+      </aside>
+    </div>
+  </section>
+
+
+  <section id="competences">
+    <div class="section__head reveal">
+      <span class="section__num">03</span>
+      <h2 class="section__title">Matrice de compétences</h2>
+    </div>
+    <div class="matrix">
+      <div class="matrix__cell reveal reveal-stagger">
+        <h4>Terrain / Hardware</h4>
+        <ul>
+          <li>Interventions MST/SSM — cuves de réacteur</li>
+          <li>Diagnostic et dépannage électromécanique</li>
+          <li>Lecture de schémas électriques</li>
+          <li>Procédures de sûreté nucléaire</li>
+        </ul>
+      </div>
+      <div class="matrix__cell reveal reveal-stagger">
+        <h4>IT / Systèmes</h4>
+        <ul>
+          <li>Administration Windows Server, Active Directory</li>
+          <li>Linux / Debian</li>
+          <li>Réseaux — VLAN, diagnostic connectivité</li>
+          <li>Scripting PowerShell</li>
+        </ul>
+      </div>
+      <div class="matrix__cell reveal reveal-stagger">
+        <h4>Certifications</h4>
+        <ul>
+          <li>SCN1 / RP1</li>
+          <li>HEV / TEV</li>
+          <li>CACES R484</li>
+          <li>GMPP · CQPM TMI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact reveal" id="contact">
+    <h2>Disponible pour un échange</h2>
+    <div class="contact__grid">
+      <div>EMAIL<span>votre@email.fr</span></div>
+      <div>TÉLÉPHONE<span>+33 6 XX XX XX XX</span></div>
+      <div>LINKEDIN<span>linkedin.com/in/ilias-...</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PANEL 2 — CV ================= -->
+<div class="panel" data-tab-panel="cv">
+
+  <header class="hero" style="padding-bottom: 4vw;">
+    <div class="hero__eyebrow reveal">Curriculum Vitae</div>
+    <h1 class="reveal" style="font-size: clamp(40px, 6vw, 72px);">Ilias</h1>
+    <div class="hero__role reveal" style="font-size: 16px; margin-top: 10px;">Field Service Engineer — Systèmes Critiques · Île-de-France · votre@email.fr · +33 6 XX XX XX XX</div>
+  </header>
+
+  <section>
+    <div class="cv-body" style="padding: 0;">
+      <main>
+        <div class="cv-block reveal">
+          <div class="cv-block__title">Profil</div>
+          <p style="font-size:15px; max-width:60ch; color: var(--mist);">
+            Field Service Engineer spécialisé dans les interventions sur cuves de réacteur nucléaire
+            (équipements MST/SSM), avec une expérience internationale (Royaume-Uni, Allemagne).
+            Parcours atypique — passage par l'IT et l'administration systèmes avant une spécialisation
+            élec/terrain en environnement nucléaire haute exigence. Trilingue FR/EN/DE.
+          </p>
+        </div>
+
+        <div class="cv-block reveal">
+          <div class="cv-block__title">Expérience</div>
+
+          <div class="xp-item">
+            <div class="xp-item__top">
+              <span class="xp-item__role">Field Service Engineer (Responsable d'Intervention)</span>
+              <span class="xp-item__date">En cours</span>
+            </div>
+            <div class="xp-item__org">Siempelkamp Nuclear Services</div>
+            <ul>
+              <li>Interventions sur cuves de réacteur nucléaire avec équipements MST/SSM</li>
+              <li>Missions internationales — Sizewell B (Royaume-Uni), Krefeld (Allemagne)</li>
+              <li>À compléter : responsabilités précises, taille d'équipe, résultats chiffrés</li>
+            </ul>
+          </div>
+
+          <div class="xp-item">
+            <div class="xp-item__top">
+              <span class="xp-item__role">Work-study — Maintenance</span>
+              <span class="xp-item__date">À dater</span>
+            </div>
+            <div class="xp-item__org">Kellal Maintenance</div>
+            <ul>
+              <li>Maintenance terrain sur machine de chargement : diagnostic, remise en service et méthode d'intervention</li>
+              <li>Expérience à présenter comme socle électromécanique transférable, en complément des missions nucléaires</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-block reveal">
+          <div class="cv-block__title">Formation</div>
+          <div class="xp-item">
+            <div class="xp-item__top"><span class="xp-item__role">Titre Professionnel — Administration Systèmes &amp; Réseaux</span></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-item__top"><span class="xp-item__role">Diplôme Graduate TSSR</span></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-item__top"><span class="xp-item__role">BUT GEII — Université de Toulon–La Garde</span></div>
+          </div>
+          <div class="xp-item">
+            <div class="xp-item__top"><span class="xp-item__role">Baccalauréat Général — Section Européenne (Anglais/Maths)</span></div>
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="cv-block reveal">
+          <div class="cv-block__title">Certifications</div>
+          <ul class="sidebar-list">
+            <li><b>Sûreté nucléaire</b>SCN1 · RP1</li>
+            <li><b>Habilitations</b>HEV · TEV</li>
+            <li><b>Levage</b>CACES R484</li>
+            <li><b>Qualification métier</b>GMPP · CQPM TMI</li>
+          </ul>
+        </div>
+
+        <div class="cv-block reveal">
+          <div class="cv-block__title">Langues</div>
+          <ul class="sidebar-list">
+            <li><b>Français</b>Natif</li>
+            <li><b>Anglais</b>Bilingue</li>
+            <li><b>Allemand</b>Professionnel</li>
+          </ul>
+        </div>
+
+        <div class="cv-block reveal">
+          <div class="cv-block__title">Compétences IT</div>
+          <ul class="sidebar-list">
+            <li><b>Systèmes</b>Windows Server, Active Directory, Linux/Debian</li>
+            <li><b>Réseaux</b>VLAN, diagnostic connectivité</li>
+            <li><b>Scripting</b>PowerShell</li>
+            <li><b>Bases de données</b>PostgreSQL (sauvegardes automatisées)</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<footer class="bottom">
+  <span>ILIAS — FIELD SERVICE ENGINEER</span>
+  <span>MIS À JOUR AOÛT 2026</span>
+</footer>
+
+<script type="module" src="globe.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
