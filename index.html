@@ -13,10 +13,17 @@
 <div class="hazard-strip"></div>
 
 <nav class="nav">
-  <div class="nav__id">DOSSIER N°<b>ILIAS-2026</b> / TERRAIN</div>
-  <div class="nav__links">
-    <button data-tab-btn="interventions" class="active">INTERVENTIONS</button>
-    <button data-tab-btn="cv">CV</button>
+  <div class="nav__id" data-i18n="nav.id">DOSSIER N°<b>ILIAS-2026</b> / TERRAIN</div>
+  <div class="nav__right">
+    <div class="nav__links">
+      <button data-tab-btn="interventions" class="active" data-i18n="nav.tab.interventions">INTERVENTIONS</button>
+      <button data-tab-btn="cv" data-i18n="nav.tab.cv">CV</button>
+    </div>
+    <div class="nav__lang" role="group" aria-label="Langue du site / Site language">
+      <button type="button" data-lang-btn="fr" class="active">FR</button>
+      <span class="nav__lang-sep">|</span>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
   </div>
 </nav>
 
@@ -24,34 +31,32 @@
 <div class="panel active" data-tab-panel="interventions">
 
   <header class="hero">
-    <div class="hero__eyebrow reveal">À l'écoute</div>
+    <div class="hero__eyebrow reveal" data-i18n="hero.eyebrow">À l'écoute</div>
     <h1 class="reveal">Ilias</h1>
-    <div class="hero__role reveal">Field Service Engineer — Systèmes Critiques</div>
+    <div class="hero__role reveal" data-i18n="hero.role">Field Service Engineer — Systèmes Critiques</div>
     <div class="hero__meta reveal">
-      <div>ZONE D'INTERVENTION<span>Domicile · France entière · International</span></div>
-      <div>SPÉCIALITÉ<span>Interventions MSDG sur cuves de réacteurs et MNGC</span></div>
-      <div>LANGUES<span>FR · EN · DE</span></div>
+      <div data-i18n="hero.meta.zone">ZONE D'INTERVENTION<span>Domicile · France entière · International</span></div>
+      <div data-i18n="hero.meta.spec">SPÉCIALITÉ<span>Interventions <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr> sur cuves de réacteurs et <abbr class="tech-abbr" tabindex="0" title="Machine de Nettoyage des Goujons de Cuve">MNGC*</abbr></span></div>
+      <div data-i18n="hero.meta.lang">LANGUES<span>FR · EN · DE</span></div>
     </div>
   </header>
 
   <section id="interventions">
     <div class="section__head reveal">
       <span class="section__num">01</span>
-      <h2 class="section__title">Journal d'intervention</h2>
+      <h2 class="section__title" data-i18n="sec01.title">Journal d'intervention</h2>
     </div>
 
     <div class="log-entry reveal reveal-stagger">
       <div class="log-entry__date"><b>UK</b>Sizewell B</div>
       <div class="log-entry__body">
-        <h3>Intervention internationale — Framatome</h3>
-        <p>Mission internationale — Sizewell B, Royaume-Uni
-Déploiement sur le site nucléaire de Sizewell B pour assurer la maintenance, la préparation et l'exploitation d'une MSDG spécifique au site. Après une première intervention consacrée à la maintenance et à la préparation de la machine avant l'ouverture du réacteur, je suis revenu à deux reprises pour les opérations d'ouverture puis de fermeture de cuve.  
-Les opérations étaient organisées en deux équipes postées, avec la responsabilité de conduire l'une des deux équipes sur mon shift. Coordination des opérations dans un environnement nucléaire britannique, en collaboration avec les équipes EDF Energy et Framatome, dans le respect des procédures, exigences de sécurité et contrôles techniques du site.</p>
+        <h3 data-i18n="log1.title">Intervention internationale — Framatome</h3>
+        <p data-i18n="log1.body">Mission internationale — Sizewell B, Royaume-Uni. Déploiement sur le site nucléaire de Sizewell B pour assurer la maintenance, la préparation et l'exploitation d'une <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr> spécifique au site. Après une première intervention consacrée à la maintenance et à la préparation de la machine avant l'ouverture du réacteur, je suis revenu à deux reprises pour les opérations d'ouverture puis de fermeture de cuve. Les opérations étaient organisées en deux équipes postées, avec la responsabilité de conduire l'une des deux équipes sur mon shift. Coordination des opérations dans un environnement nucléaire britannique, en collaboration avec les équipes EDF Energy et Framatome, dans le respect des procédures, exigences de sécurité et contrôles techniques du site.</p>
         <div class="log-entry__tags">
-          <span class="tag">UK Nuclear Site</span>
-          <span class="tag">Coordination internationale</span>
-          <span class="tag">Anglais opérationnel</span>
-          <span class="tag">Field Team Lead</span>
+          <span class="tag" data-i18n="log1.tag1">UK Nuclear Site</span>
+          <span class="tag" data-i18n="log1.tag2">Coordination internationale</span>
+          <span class="tag" data-i18n="log1.tag3">Anglais opérationnel</span>
+          <span class="tag" data-i18n="log1.tag4">Field Team Lead</span>
         </div>
       </div>
       <div class="photo-slot">
@@ -63,12 +68,12 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
     <div class="log-entry reveal reveal-stagger">
       <div class="log-entry__date"><b>DE</b>Krefeld</div>
       <div class="log-entry__body">
-        <h3>Intervention internationale — Allemagne</h3>
-        <p>Participation à l'assemblage, à l'adaptation et aux activités de préparation d'une MSDG destinée à la centrale nucléaire de Rooppur au Bangladesh. Réalisée à Krefeld, en Allemagne, cette mission s'inscrivait dans la préparation de la machine pour son premier déploiement et sa mise en service sur site. Elle comprenait notamment des opérations d'assemblage de précision, de vérification technique et d'adaptation de l'équipement.</p>
+        <h3 data-i18n="log2.title">Intervention internationale — Allemagne</h3>
+        <p data-i18n="log2.body">Participation à l'assemblage, à l'adaptation et aux activités de préparation d'une <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr> destinée à la centrale nucléaire de Rooppur au Bangladesh. Réalisée à Krefeld, en Allemagne, cette mission s'inscrivait dans la préparation de la machine pour son premier déploiement et sa mise en service sur site. Elle comprenait notamment des opérations d'assemblage de précision, de vérification technique et d'adaptation de l'équipement.</p>
         <div class="log-entry__tags">
-          <span class="tag">MSDG</span>
-          <span class="tag">Allemand professionnel</span>
-          <span class="tag">Conception/Assemblage</span>
+          <span class="tag" data-i18n="log2.tag1">MSDG</span>
+          <span class="tag" data-i18n="log2.tag2">Allemand professionnel</span>
+          <span class="tag" data-i18n="log2.tag3">Conception/Assemblage</span>
         </div>
       </div>
       <div class="photo-slot">
@@ -80,11 +85,11 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
     <div class="log-entry reveal reveal-stagger">
       <div class="log-entry__date"><b>FR</b>Site nucléaire</div>
       <div class="log-entry__body">
-        <h3>Intervention sur cuve de réacteur</h3>
-        <p>Gestion et réalisation d'opérations d'ouverture et de fermeture de cuves de réacteurs à l'aide de la MSDG (Machine de Serrage/Desserrage des Goujons). Pilotage de la machine depuis son pupitre de commande et coordination des différentes phases de l'opération. Lors de l'ouverture, la MSDG est déployée afin de détensionner les goujons permettant la dépose du couvercle de cuve. Après les opérations de maintenance ou de rechargement du combustible, la machine est remise en place afin de tensionner les goujons selon les paramètres définis, permettant le serrage du couvercle de cuve.</p>
+        <h3 data-i18n="log3.title">Intervention sur cuve de réacteur</h3>
+        <p data-i18n="log3.body">Gestion et réalisation d'opérations d'ouverture et de fermeture de cuves de réacteurs à l'aide de la <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr>. Pilotage de la machine depuis son pupitre de commande et coordination des différentes phases de l'opération. Lors de l'ouverture, la MSDG* est déployée afin de détensionner les goujons permettant la dépose du couvercle de cuve. Après les opérations de maintenance ou de rechargement du combustible, la machine est remise en place afin de tensionner les goujons selon les paramètres définis, permettant le serrage du couvercle de cuve.</p>
         <div class="log-entry__tags">
-          <span class="tag">Diagnostic terrain</span>
-          <span class="tag">Sûreté nucléaire</span>
+          <span class="tag" data-i18n="log3.tag1">Diagnostic terrain</span>
+          <span class="tag" data-i18n="log3.tag2">Sûreté nucléaire</span>
         </div>
       </div>
       <div class="photo-slot">
@@ -93,23 +98,22 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
       </div>
     </div>
     <div class="log-entry reveal reveal-stagger">
-  <div class="log-entry__date"><b>FR</b>MNGC</div>
+  <div class="log-entry__date" data-i18n="log4.date"><b>FR</b>MNGC</div>
 
   <div class="log-entry__body">
-    <h3>Assistance & exploitation — MNGC</h3>
+    <h3 data-i18n="log4.title">Assistance & exploitation — MNGC</h3>
 
-    <p>
-      Maintenance, pilotage et assistance aux opérations sur MNGC
-      (Machine de Nettoyage des Goujons de Cuve). Formation des opérateurs
+    <p data-i18n="log4.body">
+      Maintenance, pilotage et assistance aux opérations sur <abbr class="tech-abbr" tabindex="0" title="Machine de Nettoyage des Goujons de Cuve">MNGC*</abbr>. Formation des opérateurs
       au pilotage de la machine, assistance sur site lors des opérations
       et diagnostic en cas de panne.
     </p>
 
     <div class="log-entry__tags">
-      <span class="tag">Maintenance</span>
-      <span class="tag">Formation des opérateurs</span>
-      <span class="tag">Support Terrain</span>
-      <span class="tag">Diagnostic</span>
+      <span class="tag" data-i18n="log4.tag1">Maintenance</span>
+      <span class="tag" data-i18n="log4.tag2">Formation des opérateurs</span>
+      <span class="tag" data-i18n="log4.tag3">Support Terrain</span>
+      <span class="tag" data-i18n="log4.tag4">Diagnostic</span>
     </div>
   </div>
 
@@ -125,14 +129,14 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
   <section id="carte" class="operations">
     <div class="section__head reveal">
       <span class="section__num">02</span>
-      <h2 class="section__title">Zone d'opération</h2>
+      <h2 class="section__title" data-i18n="sec02.title">Zone d'opération</h2>
     </div>
     <div class="operations__grid reveal">
       <div class="globe-stage" data-globe-stage>
-        <canvas id="operations-globe" aria-label="Globe interactif des zones d'intervention"></canvas>
+        <canvas id="operations-globe" data-i18n-attr="aria-label:globe.aria.canvas" aria-label="Globe interactif des zones d'intervention"></canvas>
         <div class="globe-stage__hud">
-          <span>Vue de déploiement</span>
-          <span data-globe-status>Rotation active</span>
+          <span data-i18n="globe.hud.view">Vue de déploiement</span>
+          <span data-globe-status data-i18n="globe.hud.status">Rotation active</span>
         </div>
         <div class="globe-stage__compass" aria-hidden="true">
           <span class="compass__n"></span>
@@ -140,30 +144,30 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
           <span class="compass__e"></span>
           <span class="compass__w"></span>
         </div>
-        <div class="globe-stage__controls" aria-label="Contrôles du globe">
-          <button type="button" data-globe-action="zoom-in" title="Zoomer">+</button>
-          <button type="button" data-globe-action="zoom-out" title="Dézoomer">−</button>
-          <button type="button" data-globe-action="toggle" title="Suspendre ou reprendre la rotation">⏸</button>
-          <button type="button" data-globe-action="focus-home" title="Recentrer sur le domicile">⌂</button>
-          <button type="button" data-globe-action="focus-world" title="Vue globale">◎</button>
+        <div class="globe-stage__controls" data-i18n-attr="aria-label:globe.aria.controls" aria-label="Contrôles du globe">
+          <button type="button" data-globe-action="zoom-in" data-i18n-attr="title:globe.btn.zoomin" title="Zoomer">+</button>
+          <button type="button" data-globe-action="zoom-out" data-i18n-attr="title:globe.btn.zoomout" title="Dézoomer">−</button>
+          <button type="button" data-globe-action="toggle" data-i18n-attr="title:globe.btn.toggle" title="Suspendre ou reprendre la rotation">⏸</button>
+          <button type="button" data-globe-action="focus-home" data-i18n-attr="title:globe.btn.home" title="Recentrer sur le domicile">⌂</button>
+          <button type="button" data-globe-action="focus-world" data-i18n-attr="title:globe.btn.world" title="Vue globale">◎</button>
         </div>
         <div class="globe-stage__tooltip" data-globe-tooltip hidden></div>
       </div>
 
       <aside class="operations__panel">
         <div class="operations__summary">
-          <span>BASE DE DÉPART</span>
-          <strong>Domicile</strong>
-          <p>Zone de départ vers les différentes interventions.</p>
+          <span data-i18n="ops.summary.label">BASE DE DÉPART</span>
+          <strong data-i18n="ops.summary.value">Domicile</strong>
+          <p data-i18n="ops.summary.desc">Zone de départ vers les différentes interventions.</p>
         </div>
 
         <div class="operations__detail" data-location-detail>
           <span class="operations__code">DOM</span>
-          <h3>Domicile</h3>
-          <small>FR · Domicile</small>
+          <h3 data-i18n="ops.detail.title">Domicile</h3>
+          <small data-i18n="ops.detail.small">FR · Domicile</small>
         </div>
 
-        <div class="operations__list" data-location-list aria-label="Sites d'intervention"></div>
+        <div class="operations__list" data-location-list data-i18n-attr="aria-label:ops.aria.list" aria-label="Sites d'intervention"></div>
       </aside>
     </div>
   </section>
@@ -172,29 +176,31 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
   <section id="competences">
     <div class="section__head reveal">
       <span class="section__num">03</span>
-      <h2 class="section__title">Matrice de compétences</h2>
+      <h2 class="section__title" data-i18n="sec03.title">Matrice de compétences</h2>
     </div>
     <div class="matrix">
       <div class="matrix__cell reveal reveal-stagger">
-        <h4>Terrain / Hardware</h4>
+        <h4 data-i18n="matrix1.h4">Terrain / Hardware</h4>
         <ul>
-          <li>Interventions MSDG/MST — sur cuves de réacteur</li>
-          <li>Diagnostic et dépannage électromécanique</li>
-          <li>Assistance technique MNGC</li>
-          <li>Procédures de sûreté nucléaire</li>
+          <li data-i18n="matrix1.li1">Interventions <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr> — sur cuves de réacteur</li>
+          <li data-i18n="matrix1.li2">Diagnostic et dépannage électromécanique</li>
+          <li data-i18n="matrix1.li3">Assistance technique <abbr class="tech-abbr" tabindex="0" title="Machine de Nettoyage des Goujons de Cuve">MNGC*</abbr></li>
+          <li data-i18n="matrix1.li4">Procédures de sûreté nucléaire</li>
         </ul>
       </div>
       <div class="matrix__cell reveal reveal-stagger">
-        <h4>IT / Systèmes</h4>
+        <h4 data-i18n="matrix2.h4">IT / Systèmes</h4>
         <ul>
-          <li>Administration Windows Server, Active Directory</li>
-          <li>Linux / Debian</li>
-          <li>Réseaux — VLAN, diagnostic connectivité</li>
-          <li>Scripting PowerShell</li>
+          <li data-i18n="matrix2.li1">Administration Windows Server &amp; Active Directory</li>
+          <li data-i18n="matrix2.li2">Linux / Debian</li>
+          <li data-i18n="matrix2.li3">Réseaux</li>
+          <li data-i18n="matrix2.li4">Diagnostic de connectivité</li>
+          <li data-i18n="matrix2.li5">Scripting PowerShell</li>
+          <li data-i18n="matrix2.li6">PostgreSQL</li>
         </ul>
       </div>
       <div class="matrix__cell reveal reveal-stagger">
-        <h4>Certifications</h4>
+        <h4 data-i18n="matrix3.h4">Certifications</h4>
         <ul>
           <li>SCN-CSQ / RP</li>
           <li>HEV / TEV</li>
@@ -205,11 +211,11 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
   </section>
 
   <section class="contact reveal" id="contact">
-    <h2>Disponible pour un échange</h2>
+    <h2 data-i18n="contact.h2">Disponible pour un échange</h2>
     <div class="contact__grid">
-      <div>EMAIL<span>seddiki.ilias45@gmail.com</span></div>
-      <div>TÉLÉPHONE<span>+33 6 03 21 75 99</span></div>
-      <div>LINKEDIN<span>https://www.linkedin.com/in/ilias-seddiki-7840092a1/</span></div>
+      <div data-i18n="contact.email">EMAIL<span>seddiki.ilias45@gmail.com</span></div>
+      <div data-i18n="contact.phone">TÉLÉPHONE<span>+33 6 03 21 75 99</span></div>
+      <div>LINKEDIN<span><a href="https://www.linkedin.com/in/ilias-seddiki-7840092a1/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/ilias-seddiki-7840092a1/</a></span></div>
     </div>
   </section>
 </div>
@@ -218,110 +224,110 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
 <div class="panel" data-tab-panel="cv">
 
   <header class="hero" style="padding-bottom: 4vw;">
-    <div class="hero__eyebrow reveal">Curriculum Vitae</div>
+    <div class="hero__eyebrow reveal" data-i18n="cv.hero.eyebrow">Curriculum Vitae</div>
     <h1 class="reveal" style="font-size: clamp(40px, 6vw, 72px);">Ilias</h1>
-    <div class="hero__role reveal" style="font-size: 16px; margin-top: 10px;">Field Service Engineer — Systèmes Critiques · seddiki.ilias45@gmail.com · +33 6 03 21 75 99</div>
+    <div class="hero__role reveal" style="font-size: 16px; margin-top: 10px;" data-i18n="cv.hero.role">Field Service Engineer — Systèmes Critiques · seddiki.ilias45@gmail.com · +33 6 03 21 75 99</div>
   </header>
 
   <section>
     <div class="cv-body" style="padding: 0;">
       <main>
         <div class="cv-block reveal">
-          <div class="cv-block__title">Profil</div>
-          <p style="font-size:15px; max-width:60ch; color: var(--mist);">
+          <div class="cv-block__title" data-i18n="cv.profile.title">Profil</div>
+          <p style="font-size:15px; max-width:60ch; color: var(--mist);" data-i18n="cv.profile.body">
             Field Service Engineer spécialisé dans les interventions sur cuves de réacteur nucléaire
-            (équipements MSDG/MNGC), avec une expérience internationale (Royaume-Uni, Allemagne).
+            (équipements <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr>/<abbr class="tech-abbr" tabindex="0" title="Machine de Nettoyage des Goujons de Cuve">MNGC*</abbr>), avec une expérience internationale (Royaume-Uni, Allemagne).
             Parcours atypique — passage par l'IT et l'administration systèmes avant une spécialisation
             élec/terrain en environnement nucléaire haute exigence. Trilingue FR/EN/DE.
           </p>
         </div>
 
         <div class="cv-block reveal">
-          <div class="cv-block__title">Expérience</div>
+          <div class="cv-block__title" data-i18n="cv.experience.title">Expérience</div>
 
           <div class="xp-item">
             <div class="xp-item__top">
-              <span class="xp-item__role">Field Service Engineer (Responsable d'Intervention)</span>
-              <span class="xp-item__date">Octobre 2025-En cours</span>
+              <span class="xp-item__role" data-i18n="xp1.role">Field Service Engineer (Responsable d'Intervention)</span>
+              <span class="xp-item__date" data-i18n="xp1.date">Octobre 2025-En cours</span>
             </div>
-            <div class="xp-item__org">Siempelkamp MSDG</div>
+            <div class="xp-item__org" data-i18n="xp1.org">Siempelkamp MSDG</div>
             <ul>
-              <li>Interventions sur cuves de réacteur nucléaire avec MSDG</li>
-              <li>Missions internationales — Sizewell B (Royaume-Uni), Krefeld (Allemagne)</li>
-              <li>Rédaction de dossier de suivi d'intervention et de dossier de réalisation de travaux</li>
-              <li>Maintenance, pilotage et assistance aux opérations sur MNGC. Formation des opérateurs au pilotage de la machine, assistance sur site lors des opérations et diagnostic en cas de panne.</li>
+              <li data-i18n="xp1.li1">Interventions sur cuves de réacteur nucléaire avec <abbr class="tech-abbr" tabindex="0" title="Machine de Serrage/Desserrage des Goujons">MSDG*</abbr></li>
+              <li data-i18n="xp1.li2">Missions internationales — Sizewell B (Royaume-Uni), Krefeld (Allemagne)</li>
+              <li data-i18n="xp1.li3">Rédaction de dossier de suivi d'intervention et de dossier de réalisation de travaux</li>
+              <li data-i18n="xp1.li4">Maintenance, pilotage et assistance aux opérations sur <abbr class="tech-abbr" tabindex="0" title="Machine de Nettoyage des Goujons de Cuve">MNGC*</abbr>. Formation des opérateurs au pilotage de la machine, assistance sur site lors des opérations et diagnostic en cas de panne.</li>
             </ul>
           </div>
 
           <div class="xp-item">
             <div class="xp-item__top">
-              <span class="xp-item__role">Technicien de maintenance</span>
-              <span class="xp-item__date">Octobre 2024-Octobre 2025</span>
+              <span class="xp-item__role" data-i18n="xp2.role">Technicien de maintenance</span>
+              <span class="xp-item__date" data-i18n="xp2.date">Octobre 2024-Octobre 2025</span>
             </div>
             <div class="xp-item__org">Kellal Maintenance</div>
             <ul>
-              <li>Maintenance terrain sur machine de chargement : diagnostic, remise en service et méthode d'intervention</li>
-              <li>Maintenance des éclairages de fond de piscine, de l'outil de transfert du combustible entre le batiment réacteur et combustible. Maintenace des divers chateaux de plombs (TN12-MX8-DMK).</li>
+              <li data-i18n="xp2.li1">Maintenance terrain sur machine de chargement : diagnostic, remise en service et méthode d'intervention</li>
+              <li data-i18n="xp2.li2">Maintenance des éclairages de fond de piscine, de l'outil de transfert du combustible entre le batiment réacteur et combustible. Maintenace des divers chateaux de plombs (TN12-MX8-DMK).</li>
             </ul>
           </div>
           <div class="xp-item">
   <div class="xp-item__top">
-    <span class="xp-item__role">Administrateur Systèmes & Réseaux</span>
-    <span class="xp-item__date">Avril 2024-Juillet 2024</span>
+    <span class="xp-item__role" data-i18n="xp3.role">Administrateur Systèmes & Réseaux</span>
+    <span class="xp-item__date" data-i18n="xp3.date">Avril 2024-Juillet 2024</span>
   </div>
 
   <div class="xp-item__org">DEGREANE HORIZON</div>
 
   <ul>
-    <li>Administration et maintenance d'environnements Windows et Linux.</li>
-    <li>Maintenance et diagnostic d'infrastructures réseau.</li>
-    <li>Support utilisateurs, diagnostic et résolution d'incidents techniques.</li>
-    <li>Déploiement et gestion d'environnements virtualisés.</li>
+    <li data-i18n="xp3.li1">Administration et maintenance d'environnements Windows et Linux.</li>
+    <li data-i18n="xp3.li2">Maintenance et diagnostic d'infrastructures réseau.</li>
+    <li data-i18n="xp3.li3">Support utilisateurs, diagnostic et résolution d'incidents techniques.</li>
+    <li data-i18n="xp3.li4">Déploiement et gestion d'environnements virtualisés.</li>
   </ul>
 </div>
         </div>
 
         <div class="cv-block reveal">
-          <div class="cv-block__title">Formation</div>
+          <div class="cv-block__title" data-i18n="cv.education.title">Formation</div>
           <div class="xp-item">
-            <div class="xp-item__top"><span class="xp-item__role">Titre Professionnel — TSSR (Technicien supérieur systèmes et réseaux)</span></div>
+            <div class="xp-item__top"><span class="xp-item__role" data-i18n="edu1">Titre Professionnel — TSSR (Technicien supérieur systèmes et réseaux)</span></div>
           </div>
           <div class="xp-item">
-            <div class="xp-item__top"><span class="xp-item__role">BUT GEII — Université de Toulon–La Garde</span></div>
+            <div class="xp-item__top"><span class="xp-item__role" data-i18n="edu2">BUT GEII — Université de Toulon–La Garde</span></div>
           </div>
           <div class="xp-item">
-            <div class="xp-item__top"><span class="xp-item__role">Baccalauréat Général — Section Européenne (Anglais/Maths)</span></div>
+            <div class="xp-item__top"><span class="xp-item__role" data-i18n="edu3">Baccalauréat Général — Section Européenne (Anglais/Maths)</span></div>
           </div>
         </div>
       </main>
 
       <aside>
         <div class="cv-block reveal">
-          <div class="cv-block__title">Certifications</div>
+          <div class="cv-block__title" data-i18n="cv.certs.title">Certifications</div>
           <ul class="sidebar-list">
-            <li><b>Sûreté nucléaire</b>SCN-CSQ · RP</li>
-            <li><b>Habilitations</b>HEV · TEV</li>
-            <li><b>Levage</b>CACES R484</li>
-            <li><b>Qualification métier</b>CQPM TMI</li>
+            <li data-i18n="cv.certs.item1"><b>Sûreté nucléaire</b>SCN-CSQ · RP</li>
+            <li data-i18n="cv.certs.item2"><b>Habilitations</b>HEV · TEV</li>
+            <li data-i18n="cv.certs.item3"><b>Levage</b>CACES R484</li>
+            <li data-i18n="cv.certs.item4"><b>Qualification métier</b>CQPM TMI</li>
           </ul>
         </div>
 
         <div class="cv-block reveal">
-          <div class="cv-block__title">Langues</div>
+          <div class="cv-block__title" data-i18n="cv.langs.title">Langues</div>
           <ul class="sidebar-list">
-            <li><b>Français</b>Natif</li>
-            <li><b>Anglais</b>Bilingue</li>
-            <li><b>Allemand</b>Professionnel confirmé</li>
+            <li data-i18n="cv.langs.fr"><b>Français</b>Natif</li>
+            <li data-i18n="cv.langs.en"><b>Anglais</b>Bilingue</li>
+            <li data-i18n="cv.langs.de"><b>Allemand</b>Professionnel confirmé</li>
           </ul>
         </div>
 
         <div class="cv-block reveal">
-          <div class="cv-block__title">Compétences IT</div>
+          <div class="cv-block__title" data-i18n="cv.it.title">Compétences IT</div>
           <ul class="sidebar-list">
-            <li><b>Systèmes</b>Windows Server, Active Directory, Linux/Debian</li>
-            <li><b>Réseaux</b>VLAN, diagnostic connectivité</li>
-            <li><b>Scripting</b>PowerShell</li>
-            <li><b>Bases de données</b>PostgreSQL (sauvegardes automatisées)</li>
+            <li data-i18n="cv.it.systems"><b>Systèmes</b>Windows Server, Active Directory, Linux/Debian</li>
+            <li data-i18n="cv.it.network"><b>Réseaux</b>VLAN, diagnostic connectivité</li>
+            <li data-i18n="cv.it.script"><b>Scripting</b>PowerShell</li>
+            <li data-i18n="cv.it.db"><b>Bases de données</b>PostgreSQL (sauvegardes automatisées)</li>
           </ul>
         </div>
       </aside>
@@ -331,7 +337,7 @@ Les opérations étaient organisées en deux équipes postées, avec la responsa
 
 <footer class="bottom">
   <span>ILIAS — FIELD SERVICE ENGINEER</span>
-  <span>MIS À JOUR AOÛT 2026</span>
+  <span data-i18n="footer.updated">MIS À JOUR AOÛT 2026</span>
 </footer>
 
 <script type="module" src="globe.js"></script>

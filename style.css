@@ -57,6 +57,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
   padding: 28px 6vw;
   border-bottom: 1px solid var(--steel-line);
 }
@@ -67,9 +69,41 @@ img { max-width: 100%; display: block; }
   color: var(--mist);
 }
 .nav__id b { color: var(--amber); font-weight: 600; }
+.nav__right { display: flex; align-items: center; gap: 28px; }
 .nav__links { display: flex; gap: 28px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; }
 .nav__links a { color: var(--mist); border-bottom: 1px solid transparent; padding-bottom: 2px; transition: color .15s, border-color .15s; }
 .nav__links a:hover, .nav__links a.active { color: var(--amber); border-color: var(--amber); }
+
+/* ============================================================
+   LANGUAGE SWITCHER
+   ============================================================ */
+.nav__lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  padding-left: 20px;
+  border-left: 1px solid var(--steel-line);
+}
+.nav__lang button {
+  background: none;
+  border: none;
+  color: var(--mist);
+  padding: 2px 0;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  transition: color .15s;
+}
+.nav__lang button:hover { color: var(--amber); }
+.nav__lang button.active { color: var(--amber); font-weight: 600; }
+.nav__lang-sep { color: var(--steel-line); }
+.cv-page .nav__lang { border-left-color: var(--paper-2); }
+.cv-page .nav__lang button:hover,
+.cv-page .nav__lang button.active { color: var(--rust); }
 
 /* ============================================================
    HERO
@@ -441,6 +475,23 @@ section { padding: 5vw 6vw; }
 }
 
 /* ============================================================
+   TECHNICAL ABBREVIATIONS
+   ============================================================ */
+.tech-abbr {
+  text-decoration: underline dotted;
+  text-decoration-color: var(--mist-dark);
+  text-underline-offset: 2px;
+  cursor: help;
+}
+.tech-abbr:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  text-decoration-color: var(--amber);
+}
+.cv-page .tech-abbr { text-decoration-color: var(--mist-dark); }
+.cv-page .tech-abbr:focus-visible { outline-color: var(--rust); }
+
+/* ============================================================
    SKILLS MATRIX
    ============================================================ */
 .matrix { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--steel-line); }
@@ -603,6 +654,8 @@ body.cv-page { background: var(--paper); color: var(--ink); }
   .matrix { grid-template-columns: 1fr; }
   .cv-body { grid-template-columns: 1fr; }
   .nav__links { gap: 16px; font-size: 11px; }
+  .nav__right { gap: 14px; }
+  .nav__lang { padding-left: 12px; font-size: 11px; }
   .operations__grid { grid-template-columns: 1fr; }
   .operations__panel { min-height: auto; }
   .globe-stage { height: 430px; }
