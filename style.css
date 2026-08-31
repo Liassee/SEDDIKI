@@ -194,9 +194,25 @@ section { padding: 5vw 6vw; }
   position: relative;
   overflow: hidden;
 }
-.photo-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
-.photo-slot span { position: relative; z-index: 0; }
-.photo-slot:has(img) span { display: none; }
+.photo-slot img,
+.photo-slot video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.photo-slot span {
+  position: relative;
+  z-index: 0;
+}
+
+.photo-slot:has(img) span,
+.photo-slot:has(video) span {
+  display: none;
+}
 
 /* ============================================================
    OPERATIONS GLOBE
