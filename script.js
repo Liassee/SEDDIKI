@@ -366,8 +366,15 @@ function initLangSwitcher() {
   });
 }
 
+function initAbbreviationTooltips() {
+  document.querySelectorAll('abbr.tech-abbr').forEach(abbr => {
+    abbr.setAttribute('tabindex', '0');
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initReveal();
   initLangSwitcher();
+  initAbbreviationTooltips();
 });
